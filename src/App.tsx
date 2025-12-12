@@ -136,7 +136,7 @@ function App() {
     setTimeout(() => setMessage(null), 4000);
   }, []);
 
-  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  // Removed unused 'delay' function here
 
   const saveSettings = useCallback(() => {
     localStorage.setItem('gemini_api_key', apiKey);
@@ -309,7 +309,7 @@ OUTPUT JSON:
     }
 
     setIsLoading(true);
-    setLoadingText('বিশ্লেষণ করা হচ্ছে...'); // ব্যবহারকারীকে জানান
+    setLoadingText('বিশ্লেষণ করা হচ্ছে...'); 
 
     // Reset UI
     setCorrections([]);
